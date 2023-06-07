@@ -22,9 +22,11 @@ wireframes for the portfolio website
 design on a set number of catagories and pages 
 choose palate 
 
+![wireframe](./assets/wireframe.jpg)
+
 ## Develop
 
-- install note js in windows 
+- [X] install note js in windows
 - crash course on vue js 
 - setup a vue JS project 
 - setup vue material design library in the project 
