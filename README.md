@@ -12,9 +12,7 @@ Lego projects, oragami project, skillsusa, robtotics projects, Model UN, Stem Cl
 ## Design
  **REVISE**//change to the first person 
 
-During the design portion of the project we will be utilizing wireframes to contruct an outline of the desired website. Next will be choosing the palate to design the website and make it look vibrant. Next will be marking out the flow of the website. 
-
-The purpose of this project is to demonstrate my accomplishments through a virtual gallery hosted on a website designed and coded by him. The design for the entire website will be simple but clean. The welcome screen will be a simple grid with a faded welcome in the center. The grid will consist of a variety of sections that will host the different accomplishments wished to be showcased. The grid boxes themselves will have alternating images of the projects hosted in each section. Clicking on any of the grids will take you to that respective section where you will be greeted with a variety of information explaining each project. The initial planning and rough draft of the website should be completed in about 4~6 days. Any advanced features and the details of the website should be completed in the week following the initial planning. Finally, throughout the summer the website will be continuously updated with more projects to showcase. 
+During the design portion of the project we will be utilizing wireframes to construct an outline of the desired website. Next will be choosing the palate to design the website and make it look vibrant. Following this we will be making the flow of the website. The landing page will be a simple and elegant design. A grid composed of 8 squares to represent the 8 topics of discussion I wish to showcase in my website. The 8 topics are as follows : Lego projects, origami projects, skillsusa, robotics projects, home school extracurriculars, tech school, fitness, and an about me page. These 8 squares will be placed in random location of the screen. They will all be the same size and will fit perfectly to fill out the home page. When hovering over any square with your courser the quare will switch from a displayed image relating to the content inside of the topic to a description of what may be found by clicking on it. At the bottom of the page there will be a gallery button. When clicking on the gallery button it will take you to a chart layout of the projects and their descriptions in case you find it easier to navigate that way instead of through the gallery layout of the homepage. Regardless of how you enter, once inside a project space you will be met with a collage of videos, photos, and descriptions which further elaborate on the selected topic. At the top of any project page you will have 4 buttons. The return button to return to the previous page. The gallery button to return to the project gallery. The home page button. Finally the about me button which will direct you to the about me section. While it may be a simple design it is very effective and interconnected so that the user has access to all areas of the website on any page. 
 
 look at other student portfolio websites for insparation 
 decide in a theme for the website
@@ -27,9 +25,9 @@ choose palate
 ## Develop
 
 - [X] install note js in windows
-- crash course on vue js 
-- setup a vue JS project 
-- setup vue material design library in the project 
+- [X] crash course on vue js 
+- [X] setup a vue JS project 
+- [X] setup vuetify design library in the project 
 - create the landing page
 - create the other website pages 
 - add a contact me and about me page(could be included in the landing page)
