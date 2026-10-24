@@ -7,8 +7,6 @@ Lego projects, oragami project, skillsusa, robtotics projects, Model UN, Stem Cl
 
 ## Plan
 
-
-
 ## Design
  **REVISE**//change to the first person 
 
