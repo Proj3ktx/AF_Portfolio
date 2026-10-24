@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# This file does not hide pages. A static site publishes whatever is in the build.
+# Personal documents and contact details are kept out of the project instead.

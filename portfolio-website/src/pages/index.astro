@@ -1,0 +1,174 @@
+---
+import Mechanism from "../components/Mechanism.astro";
+import Section from "../components/Section.astro";
+import Base from "../layouts/Base.astro";
+import { href, site } from "../config/site";
+import {
+  activities,
+  coursework,
+  honors,
+  projects,
+  roles,
+  schools,
+  skillGroups,
+  work,
+} from "../content/portfolio";
+---
+
+<Base>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">
+        <span>{site.focus}</span>
+        <span>{site.school}</span>
+      </p>
+      <h1>Machines that have to work.</h1>
+      <p class="lede">
+        I’m Ali Fakira. I study engineering technology, and this portfolio is the robotics work: models, mechanical design, and the trials that show what a machine actually did.
+      </p>
+      <ul class="facts">
+        <li>{site.program}</li>
+        <li>{site.graduation}</li>
+      </ul>
+    </div>
+    <Mechanism />
+  </section>
+
+  <p class="status">
+    <a href={href("/#work")}>
+      <span class="dot"></span>
+      {work.dates} · {work.org}
+    </a>
+  </p>
+
+  <Section id={work.id} index={work.index} title={work.title} lede={work.lede}>
+    <article class="case">
+      <header class="case-banner">
+        <div>
+          <p class="kicker">{work.org}</p>
+          <h3>{work.role}</h3>
+        </div>
+        <p class="meta">{work.place}<span>{work.dates}</span></p>
+      </header>
+      <ol class="pieces">
+        {
+          work.items.map((item, index) => (
+            <li>
+              <span class="piece-index">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.summary}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </article>
+  </Section>
+
+  <Section
+    id="projects"
+    index="02"
+    title="Projects"
+    lede="School and program work that sits beside the lab internship."
+  >
+    <ol class="entries">
+      {
+        projects.map((project) => (
+          <li>
+            <div class="entry-title">
+              <h3>{project.title}</h3>
+              <p class="meta">{project.dates}</p>
+            </div>
+            <p>{project.summary}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </Section>
+
+  <Section
+    id="experience"
+    index="03"
+    title="Other experience"
+    lede="Work outside the robotics lab, newest first."
+  >
+    <ol class="entries">
+      {
+        roles.map((role) => (
+          <li>
+            <div class="entry-title">
+              <h3>{role.title}</h3>
+              <p class="meta">
+                {role.org} · {role.place}
+                <span>{role.dates}</span>
+              </p>
+            </div>
+            <p>{role.summary}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </Section>
+
+  <Section id="skills" index="04" title="Skills">
+    <div class="skill-groups">
+      {
+        skillGroups.map((group) => (
+          <article>
+            <h3>{group.label}</h3>
+            <ul class="tags">
+              {group.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section id="education" index="05" title="Education">
+    <ol class="entries schools">
+      {
+        schools.map((school) => (
+          <li>
+            <div class="entry-title">
+              <h3>{school.name}</h3>
+              <p class="meta">{school.dates}</p>
+            </div>
+            {school.detail && <p>{school.detail}</p>}
+          </li>
+        ))
+      }
+    </ol>
+    <div class="coursework">
+      <h3>Relevant coursework</h3>
+      <ul class="tags">
+        {coursework.map((course) => <li>{course}</li>)}
+      </ul>
+    </div>
+  </Section>
+
+  <Section
+    id="record"
+    index="06"
+    title="Record"
+    lede="Honors, leadership, and the activities that sat alongside the technical work."
+  >
+    <div class="record">
+      <article>
+        <h3>Honors</h3>
+        <ul class="plain">
+          {honors.map((honor) => <li>{honor}</li>)}
+        </ul>
+      </article>
+      <article>
+        <h3>Activities</h3>
+        <ul class="tags">
+          {activities.map((activity) => <li>{activity}</li>)}
+        </ul>
+      </article>
+    </div>
+  </Section>
+</Base>

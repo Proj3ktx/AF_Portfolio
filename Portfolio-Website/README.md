@@ -1,57 +1,23 @@
-# base
+# Ali Fakira portfolio
 
-## Project setup
+Static portfolio site. Astro and TypeScript. No personal documents are part of the build.
 
-```
-# yarn
-yarn
+Needs Node.js 22.23 or newer. Node 24 is a safe choice.
 
-# npm
+```bash
 npm install
-
-# pnpm
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-# yarn
-yarn dev
-
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
 ```
 
-### Compiles and minifies for production
+The dev server is http://127.0.0.1:3000.
 
-```
-# yarn
-yarn build
-
-# npm
+```bash
 npm run build
-
-# pnpm
-pnpm build
+npm run preview
 ```
 
-### Lints and fixes files
+`npm run build` refuses to finish if an email address, phone number, résumé file, or photo/video of a private type is inside `src/`, `public/`, or the finished `dist/` folder.
 
-```
-# yarn
-yarn lint
+Photos, the résumé, and the old site copy are in `.local-backup/`. That folder is gitignored. Leave it there.
 
-# npm
-npm run lint
-
-# pnpm
-pnpm lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
+GitHub Pages builds with `GITHUB_PAGES=true`, which sets the site base to `/AF_Portfolio`. The workflow is `.github/workflows/pages.yml` in the parent repository.

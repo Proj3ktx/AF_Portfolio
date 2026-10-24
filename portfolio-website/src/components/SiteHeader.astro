@@ -1,0 +1,19 @@
+---
+import { href, nav, site } from "../config/site";
+---
+
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href={href("/")}>
+      <strong>{site.name}</strong>
+      <span>{site.role}</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      {
+        nav.map((link) => (
+          <a href={href(`/#${link.id}`)}>{link.label}</a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
