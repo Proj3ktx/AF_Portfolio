@@ -18,7 +18,7 @@ const blockedExt = new Set([
   ".csv",
 ]);
 const blockedName = /(resume|curriculum|passport|social-security|\bssn\b|bank-statement)/i;
-const email = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/i;
+const email = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\b/i;
 const phone = /(?:\+?1[\s.-])?(?:\(\d{3}\)|\d{3})[\s.-]\d{3}[\s.-]\d{4}/;
 const mailto = /mailto:/i;
 const textExt = new Set([

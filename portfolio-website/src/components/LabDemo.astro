@@ -1,0 +1,82 @@
+---
+import Code from "astro/components/Code.astro";
+import { href } from "../config/site";
+import { cadModules, cadViews, deliverables, labFiles, labGroups } from "../content/lab";
+---
+
+<div class="folders">
+  <article>
+    <p class="kicker">Documents</p>
+    <h3>Review packet</h3>
+    <ul class="plain">
+      {deliverables.map((item) => <li>{item}</li>)}
+    </ul>
+  </article>
+  <article>
+    <p class="kicker">Code</p>
+    <h3>Two ROS 2 packages</h3>
+    <p>
+      TurtleBot3 waypoint trials from September 3, then the pick-and-drop lab that drives the CAD-based mobile arm. The files below are the source from those packages.
+    </p>
+  </article>
+  <article>
+    <p class="kicker">CAD · Revision B</p>
+    <h3>Design review, not a release</h3>
+    <p>
+      Eighteen modules, checked as 401 solid bodies. The review images are here. The SolidWorks and STEP files stay with the handoff because they are the fabrication model, and that model is not released to build.
+    </p>
+  </article>
+</div>
+
+<div class="cad-views">
+  {
+    cadViews.map((view) => (
+      <figure>
+        <img src={href(view.src)} alt={view.alt} width="900" height="700" />
+        <figcaption>{view.caption}</figcaption>
+      </figure>
+    ))
+  }
+</div>
+<ul class="tags cad-modules">
+  {cadModules.map((name) => <li>{name}</li>)}
+</ul>
+
+<div class="code-demo">
+  <div class="code-nav" aria-label="Lab source files">
+    {
+      labGroups.map((group) => (
+        <div class="code-group">
+          <p class="kicker">{group}</p>
+          {labFiles
+            .filter((file) => file.group === group)
+            .map((file) => (
+              <>
+                <input
+                  class="code-pick"
+                  type="radio"
+                  name="lab-file"
+                  id={`lab-${file.id}`}
+                  checked={file.id === labFiles[0].id}
+                />
+                <label for={`lab-${file.id}`}>{file.name}</label>
+              </>
+            ))}
+        </div>
+      ))
+    }
+  </div>
+  <div class="code-stage">
+    {
+      labFiles.map((file) => (
+        <article class={`code-pane pane-${file.id}`}>
+          <header>
+            <p class="kicker">{file.path}</p>
+            <p>{file.note}</p>
+          </header>
+          <Code code={file.source} lang={file.lang} theme="github-dark" />
+        </article>
+      ))
+    }
+  </div>
+</div>

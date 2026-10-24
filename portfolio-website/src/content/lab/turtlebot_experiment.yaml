@@ -1,0 +1,17 @@
+waypoint_sensor_experiment:
+  ros__parameters:
+    # Absolute coordinates in the Gazebo odom/world frame, listed x, y, x, y...
+    # The first pair is Point A and the spawn point. The robot drives to Point B
+    # and then returns to Point A through the clear horizontal corridor.
+    waypoints_flat: [-2.0, -0.5, 2.0, -0.5, -2.0, -0.5]
+    max_linear_speed: 0.22
+    max_angular_speed: 0.90
+    max_linear_accel: 0.18
+    max_linear_jerk: 0.45
+    max_angular_accel: 2.50
+    max_angular_jerk: 10.00
+    position_tolerance: 0.08
+    heading_tolerance: 0.07
+    obstacle_stop_distance: 0.30
+    camera_sample_period: 1.0
+    max_duration_sec: 150.0

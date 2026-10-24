@@ -1,4 +1,5 @@
 ---
+import LabDemo from "../components/LabDemo.astro";
 import Mechanism from "../components/Mechanism.astro";
 import Section from "../components/Section.astro";
 import Base from "../layouts/Base.astro";
@@ -67,8 +68,17 @@ import {
   </Section>
 
   <Section
-    id="projects"
+    id="lab"
     index="02"
+    title="Lab"
+    lede="The co-op handoff, opened on the page. Read the ROS 2 source, and see the Revision B review model."
+  >
+    <LabDemo />
+  </Section>
+
+  <Section
+    id="projects"
+    index="03"
     title="Projects"
     lede="School and program work that sits beside the lab internship."
   >
@@ -89,7 +99,7 @@ import {
 
   <Section
     id="experience"
-    index="03"
+    index="04"
     title="Other experience"
     lede="Work outside the robotics lab, newest first."
   >
@@ -111,7 +121,7 @@ import {
     </ol>
   </Section>
 
-  <Section id="skills" index="04" title="Skills">
+  <Section id="skills" index="05" title="Skills">
     <div class="skill-groups">
       {
         skillGroups.map((group) => (
@@ -128,7 +138,7 @@ import {
     </div>
   </Section>
 
-  <Section id="education" index="05" title="Education">
+  <Section id="education" index="06" title="Education">
     <ol class="entries schools">
       {
         schools.map((school) => (
@@ -152,7 +162,7 @@ import {
 
   <Section
     id="record"
-    index="06"
+    index="07"
     title="Record"
     lede="Honors, leadership, and the activities that sat alongside the technical work."
   >

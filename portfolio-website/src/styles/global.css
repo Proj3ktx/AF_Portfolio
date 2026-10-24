@@ -7,7 +7,7 @@
   --signal: #d6ff4a;
   --heat: #ff5a36;
   --ink-on-signal: #14180c;
-  --display: "Syne", "Avenir Next", sans-serif;
+  --display: "Outfit", "Avenir Next", sans-serif;
   --sans: "Outfit", "Avenir Next", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --page: min(1120px, calc(100% - 2.4rem));
@@ -80,7 +80,7 @@ a {
   top: 0;
   z-index: 5;
   backdrop-filter: blur(16px);
-  background: rgba(16, 20, 12, 0.78);
+  background: rgba(16, 20, 12, 0.94);
   border-bottom: 1px solid var(--line);
 }
 
@@ -102,8 +102,9 @@ a {
 
 .brand strong {
   font-family: var(--display);
+  font-weight: 600;
   font-size: 1.15rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .brand span,
@@ -152,6 +153,10 @@ a {
   padding: clamp(3rem, 8vw, 5.5rem) 0 2rem;
 }
 
+.hero > * {
+  min-width: 0;
+}
+
 .eyebrow {
   display: flex;
   flex-wrap: wrap;
@@ -167,25 +172,27 @@ h1,
 h2,
 h3 {
   font-family: var(--display);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
   margin: 0;
 }
 
 h1 {
-  max-width: 12ch;
-  font-size: clamp(3.4rem, 6.4vw, 6rem);
+  max-width: 14em;
+  font-size: clamp(2.6rem, 5.4vw, 4.6rem);
+  font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(2.2rem, 4.4vw, 3.5rem);
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
 }
 
 h3 {
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
 }
 
 .lede {
@@ -401,6 +408,7 @@ h3 {
 
 .tags li {
   margin: 0;
+  max-width: 100%;
   border: 1px solid var(--line);
   padding: 0.38rem 0.6rem;
   color: var(--ink);
@@ -439,6 +447,146 @@ h3 {
 
 .page-intro a {
   color: var(--signal);
+}
+
+.folders,
+.cad-views {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+}
+
+.folders {
+  margin-bottom: 1.5rem;
+}
+
+.folders article p,
+.cad-views figcaption,
+.code-pane header p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.folders .plain {
+  margin-top: 0.8rem;
+}
+
+.cad-views {
+  margin: 0;
+}
+
+.cad-views figure {
+  margin: 0;
+}
+
+.cad-views img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e7eef2;
+}
+
+.cad-views figcaption,
+.code-pane header .kicker {
+  margin-top: 0.7rem;
+}
+
+.cad-modules {
+  margin: 1rem 0 1.6rem;
+}
+
+.code-demo {
+  display: grid;
+  grid-template-columns: minmax(13rem, 17rem) minmax(0, 1fr);
+  gap: 1rem 1.25rem;
+  align-items: start;
+  min-width: 0;
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+}
+
+.code-nav,
+.code-stage,
+.code-pane,
+.code-group {
+  min-width: 0;
+}
+
+.code-group {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.code-pick {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.code-nav label {
+  display: block;
+  padding: 0.45rem 0.55rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.code-nav label:hover {
+  color: var(--ink);
+}
+
+.code-pick:focus-visible + label {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+.code-pane {
+  display: none;
+  min-width: 0;
+}
+
+.code-pane header p:last-child {
+  max-width: 40rem;
+  margin-bottom: 0.8rem;
+}
+
+.code-pane .astro-code {
+  margin: 0;
+  max-width: 100%;
+  max-height: 32rem;
+  overflow: auto;
+  border: 1px solid var(--line);
+  background: #141910 !important;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.code-demo:has(#lab-waypoint:checked) .pane-waypoint,
+.code-demo:has(#lab-turtlebot-config:checked) .pane-turtlebot-config,
+.code-demo:has(#lab-turtlebot-run:checked) .pane-turtlebot-run,
+.code-demo:has(#lab-pickup:checked) .pane-pickup,
+.code-demo:has(#lab-kinematics:checked) .pane-kinematics,
+.code-demo:has(#lab-pickup-config:checked) .pane-pickup-config,
+.code-demo:has(#lab-open-loop:checked) .pane-open-loop {
+  display: block;
+}
+
+.code-demo:has(#lab-waypoint:checked) label[for="lab-waypoint"],
+.code-demo:has(#lab-turtlebot-config:checked) label[for="lab-turtlebot-config"],
+.code-demo:has(#lab-turtlebot-run:checked) label[for="lab-turtlebot-run"],
+.code-demo:has(#lab-pickup:checked) label[for="lab-pickup"],
+.code-demo:has(#lab-kinematics:checked) label[for="lab-kinematics"],
+.code-demo:has(#lab-pickup-config:checked) label[for="lab-pickup-config"],
+.code-demo:has(#lab-open-loop:checked) label[for="lab-open-loop"] {
+  background: var(--signal);
+  color: var(--ink-on-signal);
 }
 
 .site-footer {
@@ -503,7 +651,13 @@ h3 {
   }
 
   h1 {
-    max-width: 8ch;
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+  }
+
+  .folders,
+  .cad-views,
+  .code-demo {
+    grid-template-columns: 1fr;
   }
 
   .nav {
