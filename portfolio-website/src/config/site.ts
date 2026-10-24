@@ -6,7 +6,7 @@ export const site = {
   program: "BSET, Engineering Technology",
   graduation: "Expected June 2029",
   description:
-    "Portfolio of Ali Fakira, a Drexel engineering technology student. Robotics models, mechanical design, digital twins, and recorded robot trials.",
+    "Ali Fakira studies engineering technology at Drexel. This page is his summer 2026 robotics lab work: ROS 2 models, SolidWorks, a Unity and Blender twin, and the trial notes.",
 } as const;
 
 export const nav = [

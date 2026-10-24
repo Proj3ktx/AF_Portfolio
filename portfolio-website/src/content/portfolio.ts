@@ -32,7 +32,7 @@ export const work = {
   id: "work",
   index: "01",
   title: "Selected work",
-  lede: "Summer 2026 at the Drexel engineering technology robotics lab. Models, mechanical design, a digital twin, and recorded trials.",
+  lede: "June to September 2026 at the Drexel ET robotics lab in Philadelphia. These are the pieces I worked on.",
   role: "Robotics engineering intern",
   org: "Drexel ET Robotics Lab",
   place: "Philadelphia, PA",
@@ -41,26 +41,27 @@ export const work = {
     {
       title: "ROS 2 models",
       summary:
-        "URDF robot models, run in ROS 2 and RViz, to support integration of the robotics system.",
+        "URDF models I ran in ROS 2 and RViz while the robot system was being put together.",
     },
     {
       title: "Mechanical design",
       summary:
-        "SolidWorks components for a two-arm mobile robot, and a design-review CAD package listing the open items to confirm before fabrication.",
+        "SolidWorks parts for a two-arm mobile robot, and a design-review CAD package that lists what still needs a check before anyone builds it.",
     },
     {
       title: "Digital twin",
-      summary: "Digital twin models of the robot in Unity and Blender.",
+      summary:
+        "The same robot in Unity and Blender, so I could look at the motion without the hardware in front of me.",
     },
     {
       title: "Trials",
       summary:
-        "TurtleBot3 and mobile-arm pickup experiments: A-B-A trials, waypoint navigation, and SLAM mapping. Results recorded, documented, and analyzed.",
+        "TurtleBot3 and mobile-arm pickup runs: A-B-A, waypoints, and SLAM. I recorded the runs and wrote up what the robot did.",
     },
     {
       title: "Lab materials",
       summary:
-        "Two illustrated student lab worksheets, including an obstacle-detour pickup task, presented in a faculty co-op review.",
+        "Two illustrated lab worksheets, including a pickup that goes around an obstacle. I walked through them in the faculty co-op review.",
     },
   ] satisfies readonly WorkItem[],
 } as const;
@@ -70,13 +71,13 @@ export const projects: readonly Project[] = [
     title: "Engineering laboratory",
     dates: "2024 – present",
     summary:
-      "Robotics, CAD, instrumentation, and measurement projects, with the results documented and analyzed.",
+      "Robotics, CAD, instrumentation, and measurement projects from class. I wrote up the results after each one.",
   },
   {
     title: "Network systems",
     dates: "2022 – 2024",
     summary:
-      "Small-scale networks: configuration, access controls, authentication, cybersecurity, and troubleshooting.",
+      "Small networks: setup, who is allowed on, authentication, basic security, and fixing what broke.",
   },
 ];
 
