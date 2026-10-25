@@ -1,6 +1,7 @@
 ---
 import LabDemo from "../components/LabDemo.astro";
 import Mechanism from "../components/Mechanism.astro";
+import ProjectStudies from "../components/ProjectStudies.astro";
 import Section from "../components/Section.astro";
 import Base from "../layouts/Base.astro";
 import { href, site } from "../config/site";
@@ -23,9 +24,9 @@ import {
         <span>{site.focus}</span>
         <span>{site.school}</span>
       </p>
-      <h1>Simple setups I can check.</h1>
+      <h1>Robotics and mechanical design.</h1>
       <p class="lede">
-        I’m Ali Fakira. I study engineering technology at Drexel, and I like a robot project when the model, the parts, and the test all line up. Most of this page is my summer 2026 internship in the robotics lab. I built ROS 2 models and looked at them in RViz, modeled a two-arm mobile robot in SolidWorks, made a twin in Unity and Blender, and ran TurtleBot and pickup trials so each run had notes.
+        I’m Ali Fakira, a junior studying Engineering Technology at Drexel University. I’m interested in robotics, automation, and mechanical design. I like working through a problem and testing ideas to see what I can improve. During my summer 2026 co-op in Drexel’s robotics lab, I worked on Python and ROS 2 simulation experiments and a two-arm mobile robot CAD design. This portfolio shows that work and what I learned along the way.
       </p>
       <ul class="facts">
         <li>{site.program}</li>
@@ -51,27 +52,15 @@ import {
         </div>
         <p class="meta">{work.place}<span>{work.dates}</span></p>
       </header>
-      <ol class="pieces">
-        {
-          work.items.map((item, index) => (
-            <li>
-              <span class="piece-index">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-              </div>
-            </li>
-          ))
-        }
-      </ol>
+      <ProjectStudies />
     </article>
   </Section>
 
   <Section
     id="lab"
     index="02"
-    title="Lab"
-    lede="Same internship, with the files on the page. The ROS 2 source is here. The CAD is Revision B, still in design review, so it is not cleared to build."
+    title="Lab files and design views"
+    lede="The project work brought together CAD, code, recorded evidence, and technical documentation. Here is a closer look at the models and source files."
   >
     <LabDemo />
   </Section>
@@ -80,7 +69,7 @@ import {
     id="projects"
     index="03"
     title="Projects"
-    lede="Class and program projects from school, next to the lab internship."
+    lede="Coursework and technical projects that helped me build the skills I brought to the robotics lab."
   >
     <ol class="entries">
       {
@@ -101,7 +90,7 @@ import {
     id="experience"
     index="04"
     title="Other experience"
-    lede="Jobs outside the robotics lab, newest first."
+    lede="My experience in IT, coaching, and customer service. Each role gave me practice solving problems and working with different people."
   >
     <ol class="entries">
       {
@@ -163,8 +152,8 @@ import {
   <Section
     id="record"
     index="07"
-    title="Record"
-    lede="Honors, and the clubs and teams I was in."
+    title="Leadership and activities"
+    lede="Programs, teams, and leadership roles I took part in alongside school."
   >
     <div class="record">
       <article>

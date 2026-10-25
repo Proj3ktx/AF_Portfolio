@@ -23,7 +23,7 @@ export const labFiles: readonly LabFile[] = [
     name: "waypoint_sensor_experiment.py",
     path: "TurtleBot3 ABA Source/ros2_ws/src/co_op_robot_experiment",
     lang: "python",
-    note: "ROS 2 node. Drives the TurtleBot3 through waypoints and records pose, scan, IMU, and camera samples.",
+    note: "Python ROS 2 node for the simulated TurtleBot3. Follows waypoints using odometry feedback and records pose, LiDAR, IMU, and camera data.",
     source: turtlebot,
   },
   {
@@ -32,7 +32,7 @@ export const labFiles: readonly LabFile[] = [
     name: "experiment.yaml",
     path: "TurtleBot3 ABA Source/config",
     lang: "yaml",
-    note: "Point A to Point B and back through the clear corridor, with the speed and tolerance limits used on September 3.",
+    note: "The A–B–A route through a clear corridor, with the speed limits and position tolerances used in the September 3 simulation.",
     source: turtlebotConfig,
   },
   {
@@ -41,7 +41,7 @@ export const labFiles: readonly LabFile[] = [
     name: "run_full_experiment.sh",
     path: "TurtleBot3 ABA Source",
     lang: "bash",
-    note: "Ubuntu launch for Gazebo, the rosbag, and the waypoint node. One run directory per trial.",
+    note: "Launch script for Gazebo, rosbag recording, and the waypoint controller on Ubuntu. Saves each trial in its own run directory.",
     source: turtlebotRun,
   },
   {
@@ -50,7 +50,7 @@ export const labFiles: readonly LabFile[] = [
     name: "mobile_pickup_experiment.py",
     path: "Drexel_ABA_Pick_Drop_Lab",
     lang: "python",
-    note: "The later controller. Five waypoints, A to B, an ideal grasp, then back to A. Simulation only.",
+    note: "Simulation controller for the single-arm pickup lab. Follows a five-waypoint route, checks the pickup position, and returns the object to A using a simplified grasp model.",
     source: pickup,
   },
   {
@@ -59,7 +59,7 @@ export const labFiles: readonly LabFile[] = [
     name: "robot_kinematics.py",
     path: "Drexel_ABA_Pick_Drop_Lab",
     lang: "python",
-    note: "Planar arm model taken from the CAD hinge centers. Inverse kinematics for carry, hover, and pick.",
+    note: "Planar arm model based on joint centers in the supplied single-arm CAD. Uses inverse kinematics to calculate carry, hover, and pickup poses.",
     source: kinematics,
   },
   {
@@ -68,7 +68,7 @@ export const labFiles: readonly LabFile[] = [
     name: "experiment.yaml",
     path: "Drexel_ABA_Pick_Drop_Lab/config",
     lang: "yaml",
-    note: "Stations stay at A and B. The lesson edits only the two middle pairs.",
+    note: "Configuration for the pickup lab. Students change the two intermediate waypoint pairs to test a detour while keeping the pickup and drop-off stations fixed.",
     source: pickupConfig,
   },
   {
@@ -77,7 +77,7 @@ export const labFiles: readonly LabFile[] = [
     name: "open_loop_demo.py",
     path: "Drexel_ABA_Pick_Drop_Lab",
     lang: "python",
-    note: "A short timed move with no pose feedback, kept separate from the waypoint controller. It refuses to run unless simulation is confirmed.",
+    note: "A short timed-motion demo without pose feedback, separate from the waypoint controller. It requires explicit simulation confirmation before running.",
     source: openLoop,
   },
 ];
@@ -97,7 +97,7 @@ export const cadViews = [
   {
     src: "lab/robot-isometric.png",
     alt: "Isometric CAD view of the Revision B two-arm mobile robot, with a mecanum base, pedestal, sensor head, and two arms.",
-    caption: "Revision B, parked envelope",
+    caption: "Two-arm robot CAD overview",
   },
   {
     src: "lab/sensor-head.png",
