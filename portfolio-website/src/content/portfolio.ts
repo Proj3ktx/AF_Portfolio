@@ -1,8 +1,3 @@
-export type WorkItem = {
-  title: string;
-  summary: string;
-};
-
 export type Project = {
   title: string;
   dates: string;
@@ -32,38 +27,11 @@ export const work = {
   id: "work",
   index: "01",
   title: "Selected work",
-  lede: "June to September 2026 at the Drexel ET robotics lab in Philadelphia. These are the pieces I worked on.",
+  lede: "During my summer 2026 co-op at Drexel’s Engineering Technology Robotics Lab, I worked on CAD models, ROS 2 simulations, robot experiments, testing, troubleshooting, and documenting my progress.",
   role: "Robotics engineering intern",
   org: "Drexel ET Robotics Lab",
   place: "Philadelphia, PA",
   dates: "June 2026 – September 2026",
-  items: [
-    {
-      title: "ROS 2 models",
-      summary:
-        "URDF models I ran in ROS 2 and RViz while the robot system was being put together.",
-    },
-    {
-      title: "Mechanical design",
-      summary:
-        "SolidWorks parts for a two-arm mobile robot, and a design-review CAD package that lists what still needs a check before anyone builds it.",
-    },
-    {
-      title: "Digital twin",
-      summary:
-        "The same robot in Unity and Blender, so I could look at the motion without the hardware in front of me.",
-    },
-    {
-      title: "Trials",
-      summary:
-        "TurtleBot3 and mobile-arm pickup runs: A-B-A, waypoints, and SLAM. I recorded the runs and wrote up what the robot did.",
-    },
-    {
-      title: "Lab materials",
-      summary:
-        "Two illustrated lab worksheets, including a pickup that goes around an obstacle. I walked through them in the faculty co-op review.",
-    },
-  ] satisfies readonly WorkItem[],
 } as const;
 
 export const projects: readonly Project[] = [
@@ -71,13 +39,13 @@ export const projects: readonly Project[] = [
     title: "Engineering laboratory",
     dates: "2024 – present",
     summary:
-      "Robotics, CAD, instrumentation, and measurement projects from class. I wrote up the results after each one.",
+      "My coursework has included robotics, CAD, instrumentation, and engineering measurements. These projects gave me practice collecting data, analyzing results, and explaining my work in technical reports.",
   },
   {
     title: "Network systems",
     dates: "2022 – 2024",
     summary:
-      "Small networks: setup, who is allowed on, authentication, basic security, and fixing what broke.",
+      "I configured small networks and worked on access controls, authentication, basic cybersecurity, and troubleshooting through my technical school program.",
   },
 ];
 
@@ -87,7 +55,7 @@ export const roles: readonly Role[] = [
     org: "Legion Fitness",
     place: "King of Prussia, PA",
     dates: "June 2024 – September 2024",
-    summary: "Led group classes and coached exercise technique and participant safety.",
+    summary: "I led group fitness classes and coached proper exercise technique and safety. Teaching others pushed me to explain things clearly and keep improving my own understanding.",
   },
   {
     title: "IT networking intern",
@@ -95,21 +63,21 @@ export const roles: readonly Role[] = [
     place: "Sugar Land, TX",
     dates: "June 2023 – August 2023",
     summary:
-      "Network cabling, hardware deployment, server configuration, troubleshooting, and the Excel records and technical notes that went with the work.",
+      "I assisted with network cabling, hardware deployment, server configuration, and troubleshooting. I also maintained technical documentation and Excel records to keep track of the work.",
   },
   {
     title: "Host, busser, and food runner",
     org: "Chili's Grill & Bar",
     place: "King of Prussia, PA",
     dates: "September 2020 – January 2021",
-    summary: "Seated guests, delivered food, and kept service areas in order.",
+    summary: "I seated guests, delivered food, and helped keep service running smoothly during busy shifts.",
   },
   {
     title: "Sales associate",
     org: "Nordstrom Rack",
     place: "King of Prussia, PA",
     dates: "June 2020 – September 2020",
-    summary: "Assisted customers, organized merchandise, and maintained the fitting rooms.",
+    summary: "I helped customers, organized merchandise, and maintained the fitting rooms while working with the sales team.",
   },
 ];
 
@@ -152,15 +120,15 @@ export const skillGroups: readonly SkillGroup[] = [
     items: ["SolidWorks", "AutoCAD", "Blender", "Unity"],
   },
   {
-    label: "Robotics",
-    items: ["ROS 2", "URDF", "LabVIEW", "MATLAB"],
+    label: "Robotics and simulation",
+    items: ["ROS 2", "URDF", "Gazebo", "RViz"],
   },
   {
-    label: "Computing",
-    items: ["Python", "Excel"],
+    label: "Programming and analysis",
+    items: ["Python", "MATLAB", "LabVIEW", "Excel"],
   },
   {
-    label: "Practice",
+    label: "Technical work",
     items: [
       "Engineering measurements",
       "Embedded systems",

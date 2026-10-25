@@ -1,0 +1,65 @@
+---
+import { href } from "../config/site";
+import { caseStudies, coOpReflection } from "../content/caseStudies";
+---
+
+<ol class="pieces project-studies">
+  {
+    caseStudies.map((project, index) => (
+      <li id={project.id}>
+        <span class="piece-index">{String(index + 1).padStart(2, "0")}</span>
+        <div class="project-study-body">
+          <p class="kicker">{project.category}</p>
+          <h3>{project.title}</h3>
+          <p>{project.overview}</p>
+          <ul class="tags project-tools" aria-label={`${project.title} tools and deliverables`}>
+            {project.tools.map((tool) => <li>{tool}</li>)}
+          </ul>
+          <details class="project-detail" open={index === 0}>
+            <summary>Approach, results, and what I learned</summary>
+            <div class="project-detail-content">
+              <h4>What I set out to do</h4>
+              <p>{project.goal}</p>
+              <h4>My work</h4>
+              <ul class="project-points">
+                {project.contributions.map((contribution) => <li>{contribution}</li>)}
+              </ul>
+              <h4>Result and current status</h4>
+              <p>{project.outcome}</p>
+              {
+                project.image && (
+                  <figure class="project-evidence">
+                    <a
+                      href={href(project.image.src)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open full-size image for ${project.title}`}
+                    >
+                      <img
+                        src={href(project.image.src)}
+                        alt={project.image.alt}
+                        width={project.image.width}
+                        height={project.image.height}
+                        loading="lazy"
+                      />
+                    </a>
+                    <figcaption>
+                      {project.image.caption} <a href={href(project.image.src)} target="_blank" rel="noopener noreferrer">View full size</a>
+                    </figcaption>
+                  </figure>
+                )
+              }
+              <h4>What I learned</h4>
+              <p>{project.lesson}</p>
+            </div>
+          </details>
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<div class="co-op-reflection">
+  <h3>What I take from this work</h3>
+  <p>{coOpReflection}</p>
+</div>

@@ -7,23 +7,23 @@ import { cadModules, cadViews, deliverables, labFiles, labGroups } from "../cont
 <div class="folders">
   <article>
     <p class="kicker">Documents</p>
-    <h3>Review packet</h3>
+    <h3>Lab handoff</h3>
     <ul class="plain">
       {deliverables.map((item) => <li>{item}</li>)}
     </ul>
   </article>
   <article>
     <p class="kicker">Code</p>
-    <h3>Two ROS 2 packages</h3>
+    <h3>ROS 2 simulation projects</h3>
     <p>
-      TurtleBot3 waypoint trials from September 3, then the pick-and-drop lab that drives the CAD-based mobile arm. The files below are the source from those packages.
+      These files cover the TurtleBot3 waypoint experiment and the later single-arm pick-and-drop lab. I used Python and ROS 2 for control, data logging, and reviewing the simulation results.
     </p>
   </article>
   <article>
     <p class="kicker">CAD · Revision B</p>
-    <h3>Design review, not a release</h3>
+    <h3>Revision B design review</h3>
     <p>
-      Eighteen modules, 401 solid bodies. The review pictures are here. The SolidWorks and STEP files are the build model, and that model is not released, so they stay with the lab handoff.
+      The two-arm robot handoff contains 18 modules and 401 solid bodies, with SolidWorks and STEP files for review. The views below show the layout. Hardware interfaces, structural loads, and full-motion clearances still need to be checked before fabrication.
     </p>
   </article>
 </div>
@@ -41,6 +41,13 @@ import { cadModules, cadViews, deliverables, labFiles, labGroups } from "../cont
 <ul class="tags cad-modules">
   {cadModules.map((name) => <li>{name}</li>)}
 </ul>
+
+<div class="lab-code-intro" id="lab-source">
+  <h3>Code and experiment setup</h3>
+  <p>
+    ROS 2 connects the robot software, Gazebo runs the simulated world, and RViz displays the robot model and sensor data. These files show how I used those tools in the experiments.
+  </p>
+</div>
 
 <div class="code-demo">
   <div class="code-nav" aria-label="Lab source files">

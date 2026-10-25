@@ -6,13 +6,14 @@ export const site = {
   program: "BSET, Engineering Technology",
   graduation: "Expected June 2029",
   description:
-    "Ali Fakira studies engineering technology at Drexel. This page is his summer 2026 robotics lab work: ROS 2 models, SolidWorks, a Unity and Blender twin, and the trial notes.",
+    "Ali Fakira is an Engineering Technology student at Drexel University with experience in robotics simulation, Python and ROS 2, and mechanical CAD design. Explore his projects and summer 2026 co-op work.",
 } as const;
 
 export const nav = [
   { id: "work", label: "Work" },
-  { id: "lab", label: "Lab" },
-  { id: "projects", label: "Projects" },
+  { id: "lab", label: "Lab files" },
+  { id: "lab-source", label: "Code" },
+  { id: "projects", label: "Coursework" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
 ] as const;
